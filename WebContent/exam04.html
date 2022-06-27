@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="assets/js/jquery/jquery-1.12.4.js"></script>
 
-<title>Insert title here</title>
+<title>Class별로 css설정하기</title>
 </head>
 
 <body>
@@ -18,6 +18,16 @@
 
 </body>
 	
+<script type="text/javascript">
+/*
+$(".red").css("color", "red");
+$(".blue").css("color", "blue");
+*/
 
+$(".red, .blue").css("color", "blue");	//이렇게 여러 클래스를 동시에 적용할 수 있다
+
+
+
+</script>
 
 </html>

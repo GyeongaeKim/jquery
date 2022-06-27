@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <script type="text/javascript" src="assets/js/jquery/jquery-1.12.4.js"></script>
 
-<title>Insert title here</title>
+<title>ID별로 css설정하기</title>
 </head>
 <body>
 	
-	
+	<!-- id는 한 페이지당 하나 -->
 	<ul>
 		<li id="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
 		<li id="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
@@ -19,8 +19,18 @@
 
 
 </body>
-	
-	
+
+<script type="text/javascript">
+
+//var tagli = $("#first");
+//tagli.css("color", "red");
+$("#first").css("color", "red");	//li의 마지막 first에는 적용되지 않는다!!!
+
+$("#third").css("color", "blue");
+
+
+
+</script>	
 
 
 </html>

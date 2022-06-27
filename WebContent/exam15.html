@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
-<title>Insert title here</title>
+<script type="text/javascript" src="assets/js/jquery/jquery-1.12.4.js"></script>
+<title>버튼을 클릭하여 li 요소를 추가해 보세요</title>
 </head>
 <body>
 	
@@ -14,8 +14,34 @@
 		<li><strong>네번째 아이템입니다.</strong></li>
 		
 	</ul>
-	<input id="btn" type="button" VALUE="li요소추가" />
+	<button id="btn" type="button">li요소추가</button>
 </body>
 
+<script type="text/javascript">
+$("#btn").on("click", function(){
+	$("ul").append("<li>다섯번째 아이템입니다.</li>");
+	$("ul").append("<li>여섯번째 아이템입니다.</li>");
+	$("ul").append("<li>일곱번째 아이템입니다.</li>");
+});
+
+//li태그를 출력했을 때 --> jquery 추가한 li 태그때문에 안됨
+/*
+$("li").on("click", function(){
+	console.log("li태그 클릭");
+	//text출력
+});
+*/
+
+//li태그를 출력했을 때 --> 부모한테 클릭이벤트를 주고 자식에게 위임
+$("ul").on("click", "li", function(){
+	$this = $(this);
+	var str = $this.text();
+	console.log(str);
+});
+
+
+
+
+</script>
 
 </html>

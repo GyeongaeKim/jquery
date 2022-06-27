@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="assets/js/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -11,6 +11,19 @@
 	<p id="p1"> abcdefghijklmn </p>
 	<p id="p2"> 학교종이 땡땡땡 abcdefg </p>
 </body>
-	
+
+<script type="text/javascript">
+
+$("#p1").text("가나다라마바사");		//텍스트 변경하기!
+
+
+//()안에 값이 없으면, 기존의 값을 가져옴
+var str = $("#p2").text();	
+console.log(str);
+
+
+
+
+</script>
 
 </html>
